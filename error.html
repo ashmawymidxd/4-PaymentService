@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slim Application Error</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 30px;
+            font: 12px/1.5 Helvetica, Arial, Verdana, sans-serif
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 48px;
+            font-weight: normal;
+            line-height: 48px
+        }
+
+        strong {
+            display: inline-block;
+            width: 65px
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Slim Application Error</h1>
+    <div>
+        <p>The application could not run because of the following error:</p>
+        <h2>Details</h2>
+        <div><strong>Type:</strong> TypeError</div>
+        <div><strong>Code:</strong> 0</div>
+        <div><strong>Message:</strong> Illuminate\Database\Eloquent\Builder::create(): Argument #1 ($attributes) must be
+            of type array, null given, called in
+            C:\xampp\htdocs\ProductService\vendor\illuminate\support\Traits\ForwardsCalls.php on line 23</div>
+        <div><strong>File:</strong> C:\xampp\htdocs\ProductService\vendor\illuminate\database\Eloquent\Builder.php</div>
+        <div><strong>Line:</strong> 1022</div>
+        <h2>Trace</h2>
+        <pre>#0 C:\xampp\htdocs\ProductService\vendor\illuminate\support\Traits\ForwardsCalls.php(23): Illuminate\Database\Eloquent\Builder-&gt;create(NULL)
+#1 C:\xampp\htdocs\ProductService\vendor\illuminate\database\Eloquent\Model.php(2334): Illuminate\Database\Eloquent\Model-&gt;forwardCallTo(Object(Illuminate\Database\Eloquent\Builder), &#039;create&#039;, Array)
+#2 C:\xampp\htdocs\ProductService\vendor\illuminate\database\Eloquent\Model.php(2346): Illuminate\Database\Eloquent\Model-&gt;__call(&#039;create&#039;, Array)
+#3 C:\xampp\htdocs\ProductService\src\Controllers\CategoryController.php(31): Illuminate\Database\Eloquent\Model::__callStatic(&#039;create&#039;, Array)
+#4 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\Handlers\Strategies\RequestResponse.php(38): App\Controllers\CategoryController-&gt;create(Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#5 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\Routing\Route.php(363): Slim\Handlers\Strategies\RequestResponse-&gt;__invoke(Array, Object(Slim\Psr7\Request), Object(Slim\Psr7\Response), Array)
+#6 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\MiddlewareDispatcher.php(73): Slim\Routing\Route-&gt;handle(Object(Slim\Psr7\Request))
+#7 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\MiddlewareDispatcher.php(73): Slim\MiddlewareDispatcher-&gt;handle(Object(Slim\Psr7\Request))
+#8 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\Routing\Route.php(321): Slim\MiddlewareDispatcher-&gt;handle(Object(Slim\Psr7\Request))
+#9 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\Routing\RouteRunner.php(74): Slim\Routing\Route-&gt;run(Object(Slim\Psr7\Request))
+#10 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\Middleware\ErrorMiddleware.php(77): Slim\Routing\RouteRunner-&gt;handle(Object(Slim\Psr7\Request))
+#11 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\MiddlewareDispatcher.php(129): Slim\Middleware\ErrorMiddleware-&gt;process(Object(Slim\Psr7\Request), Object(Slim\Routing\RouteRunner))
+#12 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\MiddlewareDispatcher.php(73): Psr\Http\Server\RequestHandlerInterface@anonymous-&gt;handle(Object(Slim\Psr7\Request))
+#13 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\App.php(209): Slim\MiddlewareDispatcher-&gt;handle(Object(Slim\Psr7\Request))
+#14 C:\xampp\htdocs\ProductService\vendor\slim\slim\Slim\App.php(193): Slim\App-&gt;handle(Object(Slim\Psr7\Request))
+#15 C:\xampp\htdocs\ProductService\public\index.php(22): Slim\App-&gt;run()
+#16 {main}</pre>
+    </div> <a href="#" onclick="window.history.go(-1)">Go Back</a>
+</body>
+
+</html>

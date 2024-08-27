@@ -1,0 +1,13 @@
+php -S 127.0.0.1:40000 -t public
+./vendor/bin/phinx create CreatePaymentsTable
+./vendor/bin/phinx migrate
+===== for http request ===========
+composer require guzzlehttp/guzzle
+$table->addColumn('order_id', 'integer')
+  ->addColumn('stripe_charge_id', 'string')
+  ->addColumn('amount', 'decimal', ['precision' => 10, 'scale' => 2])
+  ->addColumn('currency', 'string', ['limit' => 3])
+  ->create();
+
+========= paied invoices ==============
+https://pay.stripe.com/receipts/payment/CAcaFwoVYWNjdF8xUGVNaUdFcUR6TGVDY3R3KO3d67QGMgaYNBXooSQ6LBZ4jRLxoJP5LrG63UHaJ92iIgPcCyCWbwxlkdfHDhu2Khfwo3pUL8AmupVy
